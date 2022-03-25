@@ -74,11 +74,25 @@ const textoEnCadena = (cadena = "", texto = "")=>{
 
     return console.info(`La palabra ${texto} se repite ${contador} veces` );
 }
-textoEnCadena()
+/* textoEnCadena()
 textoEnCadena("", "mundo");
 textoEnCadena("hola mundo adios mundo")
-textoEnCadena("hola mundo adios mundo", "mundo")
+textoEnCadena("hola mundo adios mundo", "mundo") */
 
 //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+const palindromo = (palabra = "")=> {
+    if(!palabra) return console.warn("No ingresaste una palabra o frase");
+
+    palabra = palabra.toLowerCase()
+    let alReves = palabra.split("").reverse().join("")
+
+    return (palabra === alReves)
+        ? console.info(`Si es palíndromo, Palabra original ${palabra}, Palabra al revés ${alReves}`)
+        : console.info(`No es palíndromo, Palabra original ${palabra}, Palabra al revés ${alReves}`)
+}
+palindromo()
+palindromo("hola Mundo")
+palindromo("salas")
 
 //8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
