@@ -53,9 +53,31 @@ const invertirCadena = (cadena = "") =>
     ? console.warn('No ingresaste ninguna cadena') 
     : console.info(cadena.split("").reverse().join(""));
 
-invertirCadena("Hola Mundo");
+//invertirCadena("Hola Mundo");
 
 //6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+const textoEnCadena = (cadena = "", texto = "")=>{
+    if(!cadena) return console.warn("No ingresaste el texto largo");
+
+    if(!texto)return console.warn("No ingresaste la palabra a evaluar")
+
+    let i = 0,
+    contador = 0;
+
+    while (i !==-1) {
+        i = cadena.indexOf(texto, i);
+        if(i!==-1){
+            i++;
+            contador++
+        }
+    }
+
+    return console.info(`La palabra ${texto} se repite ${contador} veces` );
+}
+textoEnCadena()
+textoEnCadena("", "mundo");
+textoEnCadena("hola mundo adios mundo")
+textoEnCadena("hola mundo adios mundo", "mundo")
 
 //7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
