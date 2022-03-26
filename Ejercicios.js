@@ -109,20 +109,23 @@ eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") */
 //9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
 
 const aleatorio = () => console.info(Math.round((Math.random() * 100) + 500));
-aleatorio();
-  //console.log(getRandomInt())
+//aleatorio();
+  
 //10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
-/* const capicua = (numero = 0)=> {
+const capicua = (numero = 0)=> {
     if(!numero) return console.warn("No ingresaste ningun numero");
 
+    if(typeof numero !=="number")return console.error(`El valor "${numero}" ingresado, NO es un número`);
     
-    let alReves = numero.reverse().join()
+    numero = numero.toString()
+    let alReves = numero.split("").reverse().join("")
 
-    return (numero === alReves)
+    return ((numero) === alReves)
         ? console.info(`Si es capicua, numero original ${numero}, numero al revés ${alReves}`)
         : console.info(`No es capicua, numero original ${numero}, numero al revés ${alReves}`)
-} */
-//capicua(1991)
+}
+capicua()
+capicua(1991)
 //11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
 /* function factorial(n){
     let fact = 1
