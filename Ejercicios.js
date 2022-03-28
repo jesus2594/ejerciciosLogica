@@ -132,8 +132,6 @@ const factorial = (numero = undefined) => {
 
     if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, NO es un número`)
 
-    if(numero === 0) return console.error("El número no puede ser 0")
-
     if(Math.sign(numero) === -1) return console.error("El numero no puede ser negativo")
 
     let fact = 1
@@ -143,4 +141,42 @@ const factorial = (numero = undefined) => {
     }
     return console.info(`El factorial de ${numero} es ${fact}`);
 }
-factorial(5)
+//factorial(0)
+
+//12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+const numeroPrimo = (numero = undefined) => {
+    if(numero === undefined) return console.warn("No ingresaste un número")
+
+    if(typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, NO es un número`)
+
+    if(Math.sign(numero) === -1) return console.error("El numero no puede ser negativo")
+
+    if(numero === 1) return console.error("El numero no puede ser 1")
+
+    if(numero === 0) return console.error("El numero no puede ser 0")
+
+    let divisible = false
+
+    for(let i = 2; i < numero; i++){
+        if((numero % i) === 0) {
+            divisible = true
+            break
+        }
+    }
+
+    return(divisible)
+    ? console.log(`El numero ${numero}, NO es primo`)
+    : console.log(`El numero ${numero}, sí es primo`)
+}
+
+numeroPrimo()
+numeroPrimo("320")
+numeroPrimo(true)
+numeroPrimo(0)
+numeroPrimo(1)
+numeroPrimo(-13)
+numeroPrimo(13)
+
+
+//13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+//14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
