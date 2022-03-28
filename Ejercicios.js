@@ -169,14 +169,29 @@ const numeroPrimo = (numero = undefined) => {
     : console.log(`El numero ${numero}, sí es primo`)
 }
 
-numeroPrimo()
+/* numeroPrimo()
 numeroPrimo("320")
 numeroPrimo(true)
 numeroPrimo(0)
 numeroPrimo(1)
 numeroPrimo(-13)
-numeroPrimo(13)
+numeroPrimo(13) */
 
 
 //13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+const numeroParImpar = (numero = undefined) => {
+    if(numero === undefined) return console.warn("No ingresaste un número");
+
+    if(typeof numero !== "number")return console.error(`El valor "${numero}" ingresado, NO es un número`);
+
+    return((numero % 2) === 0)
+        ? console.info(`El número ${numero} es Par`)
+        : console.info(`El número ${numero} es Impar`)
+}
+
+numeroParImpar()
+numeroParImpar("12")
+numeroParImpar(-12)
+numeroParImpar(19)
+
 //14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
