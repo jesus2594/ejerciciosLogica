@@ -232,14 +232,45 @@ const convertirBinarioDecimal = (numero = undefined, base = undefined) => {
 
     if(base === 2) {
         return console.info(`${numero} base ${base} = ${parseInt(numero, base)} base 10`);
+    }else if(base === 10){
+        return console.info(`${numero} base ${base} = ${(numero.toString(base))} base 2`)
+    } else {
+        return console.error("el tipo de base a convertir NO es válido")
     }
 }
 
-convertirBinarioDecimal()
+/* convertirBinarioDecimal()
 convertirBinarioDecimal("2")
 convertirBinarioDecimal(100)
 convertirBinarioDecimal(100, "2")
 convertirBinarioDecimal(100, 2)
+convertirBinarioDecimal(1110010, 2)
+convertirBinarioDecimal(4, 10)
+convertirBinarioDecimal(114, 10) */
 
 //16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+
+const aplicarDescuento = (monto = undefined, descuento = 0) => {
+    if(monto === undefined) return console.warn("No ingresaste el monto")
+
+    if(typeof monto !== "number") return console.error(`El valor "${monto}" ingresado, NO es un número`)
+
+    if(monto === 0) return console.error("El monto no puede ser 0")
+
+    if(Math.sign(monto) === -1) return console.error("El numero no puede ser negativo")
+
+    if(typeof descuento!== "number") return console.error(`El valor "${descuento}" ingresado, NO es un número`)
+
+    return console.info(`${monto} - ${descuento}% = ${monto - ((monto * descuento)/100)}`)
+
+}
+
+aplicarDescuento()
+aplicarDescuento("200")
+aplicarDescuento(0)
+aplicarDescuento(-1000)
+aplicarDescuento(1000, -20)
+aplicarDescuento(1000)
+aplicarDescuento(1000, 25)
+
 //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020)
