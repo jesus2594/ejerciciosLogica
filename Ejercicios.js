@@ -292,7 +292,42 @@ const calcularAnios =(fecha = undefined) => {
             : console.info(`Estamos en el año actual ${fecha.getFullYear()}.`)
 }
 
-calcularAnios()
+/* calcularAnios()
 calcularAnios({})
 calcularAnios(new Date())
-calcularAnios(new Date(1984, 4, 23))
+calcularAnios(new Date(1984, 4, 23)) */
+
+//18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+const contarLetras = (cadena = "") => {
+    if(!cadena) return console.warn("No ingresaste una cadena de texto");
+
+    if(typeof cadena !== "string") return console.error(`El valor "${cadena}" ingresado, NO es una cadena de texto`);
+
+    let vocales = 0,
+    consonantes = 0;
+
+    cadena = cadena.toLocaleLowerCase();
+
+    for(let letra of cadena){
+        if(/[aeiouáéíóú]/.test(letra)) {
+            vocales++;
+        }
+
+        if(/[bcdfghjklmnñpqstvwxyz]/.test(letra)){
+            consonantes++;
+        }
+    }
+
+    return console.info({
+        cadena,
+        vocales,
+        consonantes
+    })
+}
+
+contarLetras()
+contarLetras(3)
+contarLetras("hola mundo")
+//19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+//20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
