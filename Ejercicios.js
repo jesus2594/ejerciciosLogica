@@ -325,9 +325,26 @@ const contarLetras = (cadena = "") => {
     })
 }
 
-contarLetras()
+/* contarLetras()
 contarLetras(3)
-contarLetras("hola mundo")
+contarLetras("hola mundo") */
+
 //19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+const validarNombre = (nombre = "") => {
+    if(!nombre) return console.warn("No ingresaste un nombre")
+
+    if(typeof nombre !== "string") return console.error(`El valor "${nombre}" ingresado, NO es una cadena de texto`);
+
+    let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(nombre);
+
+    return (expReg)
+        ? console.info(`"${nombre}", es un nombre válido`)
+        : console.warn(`"${nombre}", NO es un nombre válido`);
+}
+
+validarNombre()
+validarNombre(3)
+validarNombre("Juan Lopez")
+validarNombre("Juan Lopez, 19")
 
 //20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
