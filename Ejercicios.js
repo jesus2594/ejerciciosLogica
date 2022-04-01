@@ -541,3 +541,5 @@ promedio({})
 promedio([])
 promedio([2, true])
 promedio([9,8,7,6,5,4,3,2,1,0])
+promedio([9,8,7,6,5,4,3,2,1])
+
