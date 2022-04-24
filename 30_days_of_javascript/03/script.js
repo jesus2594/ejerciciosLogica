@@ -269,6 +269,25 @@ console.log(`${date}-${month}-${year} ${hours}:${minutes}`)
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`)
 */
 
+//----------------------------------------------------------------------------------
+Exercises: Level 3
+Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+*/
+
+const now = new Date()
+const year = now.getFullYear()
+let month = now.getMonth() + 1
+if (month < 10)  month = '0'+month;
+//month = ("0" + month).slice(-2);
+const date = now.getDate()
+let hours = now.getHours()
+hours = ("0" + hours).slice(-2);
+let minutes = now.getMinutes()
+minutes = ("0" + minutes).slice(-2);
+
+
+console.log(`${year}-${month}-${date} ${hours}:${minutes}`)
 
 
 
