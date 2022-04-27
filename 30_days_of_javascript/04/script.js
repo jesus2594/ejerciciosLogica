@@ -154,5 +154,42 @@ switch(true){
 }
 
 */
+Exercises: Level 3
+Write a program which tells the number of days in a month
+
+  Enter a month: January
+  January has 31 days.
+
+  Enter a month: JANUARY
+  January has 31 day
+
+  Enter a month: February
+  February has 28 days.
+
+  Enter a month: FEbruary
+  February has 28 days.
+
+
+
+let month = prompt('Enter a month?')
+let monthCap = month.charAt(0).toUpperCase() + month.slice(1).toLowerCase()
+
+
+switch(true){
+    case monthCap === 'January' || monthCap === 'March' || monthCap === 'May' || monthCap === 'July' || monthCap === 'August' || monthCap === 'October' || monthCap === 'December' :
+        console.log(`${monthCap} has 31 days`)
+    break;
+
+    case monthCap === 'April' || monthCap === 'June' || monthCap === 'September' || monthCap === 'November' :
+        console.log(`${monthCap} has 30 days`)
+    break;
+
+    case monthCap === 'February' :
+        console.log(`${monthCap} has 28 days`)
+    break;
+    
+}
+*/
+
 
 
