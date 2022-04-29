@@ -132,6 +132,76 @@ console.log(itCompanies.slice(pos, pos + 1))  */
 //Remove all IT companies
 //console.log(itCompanies.splice())
 
+/* Exercise: Level 2 */
+
+//Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
+ 
+/* First remove all the punctuations and change the string to array and count the number of words in the array 
+
+
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+let str = text.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ")
+let strSpli = str.split(' ')
+console.log(strSpli)
+console.log(strSpli.length)
+*/
+
+//In the following shopping cart add, remove, edit items
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+
+
+/* add 'Meat' in the beginning of your shopping cart if it has not been already added
+if(!shoppingCart.includes('Meat')){
+  console.log(shoppingCart)
+  shoppingCart.unshift('Meat')
+  console.log(shoppingCart)
+
+}else{
+  console.log('it already added')
+}
+*/
+//add Sugar at the end of you shopping cart if it has not been already added
+/* if(!shoppingCart.includes('Sugar')){
+  console.log(shoppingCart)
+  shoppingCart.push('Sugar')
+  console.log(shoppingCart)
+
+}else{
+  console.log('it already added')
+} */
+
+//remove 'Honey' if you are allergic to honey
+/* let allergic = false
+if(allergic){
+  console.log(shoppingCart)
+  shoppingCart.pop('Honey')
+  console.log(shoppingCart)
+
+}else{
+  console.log('I am not allergic to honey')
+  console.log(shoppingCart)
+
+} */
+
+//modify Tea to 'Green Tea'
+/* let index =  shoppingCart.indexOf('Tea')
+shoppingCart.splice(index, 1, 'Green Tea')
+console.log(shoppingCart) */
+
+//Concatenate the following two variables and store it in a fullStack variable.
+/* 
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+let fullStack = frontEnd.concat(backEnd)
+console.log(fullStack)
+*/
+
+
+
+
+
+
 
 
 
