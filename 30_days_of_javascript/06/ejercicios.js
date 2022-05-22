@@ -241,3 +241,103 @@ console.log(arr)
   
   console.log(generateId()); */
 
+//Exercises: Level 2
+/* Develop a small script which generate any number of characters random id:
+
+    fe3jo1gl124g
+
+    xkqci4utda1lmbelpkm03rba
+ 
+
+    function generateId() {
+        let id = "";
+        let randomCharts = "abcdefghijklmnopqrstuvwxyz0123456789";
+        const min = 8
+        const max = 30
+        const num = Math.floor(Math.random() * (max - min + 1)) + min;
+      
+        for (let i = 0; i < num; i++)
+          id += randomCharts.charAt(Math.floor(Math.random() * randomCharts.length));
+      
+        return id;
+      }
+      
+      console.log(generateId());
+      */
+//Write a script which generates a random hexadecimal number. = '#ee33df'
+/* const random_hex_color_code = () => {
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
+  
+console.log(random_hex_color_code()) */
+
+//Write a script which generates a random rgb color number. = rgb(240,180,80)
+/* const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+const r = randomBetween(0, 255);
+const g = randomBetween(0, 255);
+const b = randomBetween(0, 255);
+const rgb = `rgb(${r},${g},${b})`;
+console.log(rgb) */
+
+//Using the above countries array, create the following new array.
+//const arr = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+/*let newArr = []
+for (const i of arr) {
+    newArr.push(i)
+}
+console.log(newArr) */
+
+//Using the above countries array, create an array for countries length
+//[7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+/* let lengthArr = []
+for (const i of arr) {
+    lengthArr.push(i.length)
+}
+console.log(lengthArr) */
+
+//Use the countries array to create the following array of arrays:
+/* 
+  [
+  ['Albania', 'ALB', 7],
+  ['Bolivia', 'BOL', 7],
+  ['Canada', 'CAN', 6],
+  ['Denmark', 'DEN', 7],
+  ['Ethiopia', 'ETH', 8],
+  ['Finland', 'FIN', 7],
+  ['Germany', 'GER', 7],
+  ['Hungary', 'HUN', 7],
+  ['Ireland', 'IRE', 7],
+  ['Iceland', 'ICE', 7],
+  ['Japan', 'JAP', 5],
+  ['Kenya', 'KEN', 5]
+]
+
+let lengthArr = []
+for (const i of arr) {
+    lengthArr.push([i, i.slice(0, 3), i.length])
+}
+console.log(lengthArr)
+*/
+
+/* 
+In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land
+['Finland','Ireland', 'Iceland']
+
+const countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+let arr = []
+for(let i = 0; i < countries.length; i++){
+    if(countries[i].toLowerCase().includes('land'))
+    arr.push(countries[i].charAt(0).toUpperCase() + countries[i].slice(1).toLowerCase())
+}
+if(arr.length > 0 )
+  console.log(arr);
+else
+  console.log('All these are countries without land')
+*/
+
+/* 
+In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia
+['Albania', 'Bolivia','Ethiopia']
+
