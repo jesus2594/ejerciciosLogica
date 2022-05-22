@@ -340,4 +340,135 @@ else
 /* 
 In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia
 ['Albania', 'Bolivia','Ethiopia']
+*/
+
+/*
+const countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+let arr = ""
+ for(let i = 0; i < countries.length; i++){
+    if(countries[i].toLowerCase().endsWith('ia'))
+    arr.push(countries[i].charAt(0).toUpperCase() + countries[i].slice(1).toLowerCase())
+}
+if(arr.length > 0 )
+  console.log(arr);
+else
+  console.log('All these are countries without ia') */
+
+//Using the above countries array, find the country containing the biggest number of characters.
+//Ethiopia
+/* const countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+let arr = ""
+let max = 0
+
+for(let i = 0; i < countries.length; i++){
+    valor = countries[i].length
+    if(max < valor ){
+        max = valor
+
+        if(countries[i].length === max){
+            arr = countries[i].charAt(0).toUpperCase() + countries[i].slice(1).toLowerCase()
+        }  
+    }  
+}
+console.log(arr)
+ */
+
+//Using the above countries array, find the country containing only 5 characters.
+//['Japan', 'Kenya']
+/* const countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+let arr = []
+
+for(let i = 0; i < countries.length; i++){   
+
+    if(countries[i].length === 5)
+         arr.push(countries[i].charAt(0).toUpperCase() + countries[i].slice(1).toLowerCase())
+     
+}
+console.log(arr) */
+
+//Find the longest word in the webTechs array
+/* const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+  ]
+
+let arr = ""
+let max = 0
+
+for(let i = 0; i < webTechs.length; i++){
+    valor = webTechs[i].length
+    if(max < valor ){
+        max = valor
+
+        if(webTechs[i].length === max)
+            arr = webTechs[i].charAt(0).toUpperCase() + webTechs[i].slice(1).toLowerCase() 
+    }  
+}
+console.log(arr) */
+
+//Use the webTechs array to create the following array of arrays:
+//[["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+/* const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+
+let newArr = []
+for (const i of webTechs) {
+    newArr.push([i,  i.length])
+}
+console.log(newArr) */
+//An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+/* const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+
+let arr = ""
+for(let i = 0; i < mernStack.length; i++){
+    
+    arr += mernStack[i].charAt(0)
+}
+console.log(arr) */
+
+//Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+/* const arr = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+for (const i of arr) {
+    console.log(i)
+} */
+
+//This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+/* const fruitArray = ['banana', 'orange', 'mango', 'lemon']
+let reverse = []
+for(let i = fruitArray.length -1; i > -1; i--){
+    reverse.push(fruitArray[i])
+}
+console.log(reverse) */
+
+/* Print all the elements of array as shown below.
+
+HTML
+CSS
+JS
+REACT
+NODE
+EXPRESS
+MONGODB 
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+]
+
+ for(let i = 0; i < fullStack.length; i++) 
+    for(let j = 0; j < fullStack[i].length; j++)
+    console.log(fullStack[i][j])
+*/
 
